@@ -1,0 +1,10 @@
+# ~/.tmuxinator/
+
+name: general
+root: ~/code/sandbox/test-vim
+
+windows:
+  - editor: docker run -e "TERM=screen-256color" -v $(pwd):/home/uservim/code/ -it me_vim
+  - server: docker run -p 9000:9000 -p 8001:8001 -p 3000:3000 -p 35729:35729 -v $(pwd)/samplewebapp:/home/deployer/code -it me_webapp
+  - logs: ls -la;cal
+
