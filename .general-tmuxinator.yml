@@ -1,7 +1,7 @@
 # ~/.tmuxinator/
 
-name: general
-root: ~/code/sandbox/test-vim
+name: uno11
+root: dos22
 
 windows:
   - editor: docker run -e "TERM=screen-256color" -v $(pwd):/home/uservim/code/ -it me_vim

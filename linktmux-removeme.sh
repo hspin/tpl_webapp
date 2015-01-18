@@ -1,7 +1,12 @@
 #!/bin/bash
 
 DIR=`pwd`
+HNAME=${PWD##*/} 
 
-ln -s $DIR/.general-tmuxinator.yml $HOME/.tmuxinator/general.yml
+sed -i '' 's/uno11/$HNAME/' .general-tmuxinator.yml
+
+sed -i '' 's/dos22/$DIR/' .general-tmuxinator.yml
+
+ln -s $DIR/.general-tmuxinator.yml $HOME/.tmuxinator/$DIR.yml
 
 echo "tmuxinator is ready"
