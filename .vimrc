@@ -5,4 +5,6 @@ augroup LOCAL_SETUP
     autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 augroup end
 
+let g:unite_source_session_path="~/code/.sessions/"
+
 " colorscheme elflord
