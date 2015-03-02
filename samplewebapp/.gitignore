@@ -35,6 +35,10 @@ nbproject
 .node_history
 .sessions
 
+# Other
+######################
+.sync
+
 # this project
 
 #dist

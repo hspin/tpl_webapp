@@ -10,3 +10,6 @@ sed -i "s|dos22|$DIR|" .general-tmuxinator.yml
 ln -s $DIR/.general-tmuxinator.yml $HOME/.tmuxinator/$HNAME.yml
 
 echo "tmuxinator is ready"
+echo "*******************************"
+echo "Change NAME in tmuxinator file"
+echo "*******************************"

@@ -4,8 +4,7 @@ name: uno11
 root: dos22
 
 windows:
-  - editor: docker run --rm -e="TERM=screen-256color" -v $(pwd):/home/uservim/code/ -it me_vim
-  - server: sleep 2; docker run --rm -p 9000:9000 -p 8001:8001 -p 3000:3000 -p 35729:35729 -v $(pwd):/home/deployer/code/ --link mymongodb:mymongodb -it me_webapp
-  - mongo: docker run --rm -p 27017:27017 --name mymongodb mongo
-  - logs: ls -la;cal
-
+  - editor: docker run --rm -e="TERM=screen-256color" -v $(pwd)/.sessions/:/home/uservim/.sessions -v $(pwd)/NAME:/home/uservim/code/ -it me_vim
+  - server: sleep 2; docker run --rm -p 9000:9000 -p 8001:8001 -p 3000:3000 -p 35729:35729 -v $(pwd)/NAME:/home/deployer/code/ --link mymongodb:mymongodb -it me_webapp
+  - mongo: docker run --rm -p 27017:27017 --name mymongodb mongodb
+  - logs: ls -la
