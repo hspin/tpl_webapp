@@ -1,10 +1,17 @@
 # ~/.tmuxinator/
 
 name: uno11
-root: dos22
+root: ~/code/clients/dos22
 
 windows:
-  - editor: docker run --rm -e="TERM=screen-256color" -v $(pwd)/.sessions/:/home/uservim/.sessions -v $(pwd)/NAME:/home/uservim/code/ -it me_vim
-  - server: sleep 2; docker run --rm -p 9000:9000 -p 8001:8001 -p 3000:3000 -p 35729:35729 -v $(pwd)/NAME:/home/deployer/code/ --link mymongodb:mymongodb -it me_webapp
+  - editor:
+      layout: d096,97x84,0,0[97x73,0,0,0,97x10,0,74,2]
+      panes:
+        - docker run --rm -e="TERM=screen-256color" -v $(pwd)/.sessions/:/home/uservim/.sessions -v $(pwd)/NAME:/home/uservim/code/ -it me_vim
+        - sleep 2; docker run --rm -p 9000:9000 -p 8001:8001 -p 3000:3000 -p 35729:35729 -v $(pwd)/NAME:/home/deployer/code/ --link mymongodb:mymongodb -it me_webapp
   - mongo: docker run --rm -p 27017:27017 --name mymongodb mongodb
   - logs: ls -la
+
+# orig basic layout
+#  - editor: docker run --rm -e="TERM=screen-256color" -v $(pwd)/.sessions/:/home/uservim/.sessions -v $(pwd)/NAME:/home/uservim/code/ -it me_vim
+#  - server: sleep 2; docker run --rm -p 9000:9000 -p 8001:8001 -p 3000:3000 -p 35729:35729 -v $(pwd)/NAME:/home/deployer/code/ --link mymongodb:mymongodb -it me_webapp
