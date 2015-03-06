@@ -7,4 +7,6 @@ augroup end
 
 let g:unite_source_session_path="/home/uservim/code/.sessions/"
 
+let g:unite_source_rec_async_command='ag --nocolor --nogroup --ignore "bower_components" --ignore "dist" --ignore ".tmp" --ignore ".git" --ignore "node_modules" --hidden -g ""'
+
 " colorscheme elflord
