@@ -1,4 +1,4 @@
-lock '3.2.1'
+lock '3.4.0'
 
 set :application, 'nellymoservideo'
 # set :repo_url, 'git@bbnellymoser.org:hspindesign/cli_nellymoser-video.git'
